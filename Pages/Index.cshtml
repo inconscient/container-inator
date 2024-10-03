@@ -1,10 +1,13 @@
 ﻿@page
 @model IndexModel
+@inject IWebHostEnvironment environment
 @{
     ViewData["Title"] = "Home page";
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Container environment testing app</a>.</p>
+    <p>Container environment testing app.</p>
+    <p>@environment.ApplicationName</p>
 </div>

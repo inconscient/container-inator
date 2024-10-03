@@ -8,6 +8,7 @@
     <UserSecretsId>6a11a16c-c10c-4da5-9361-953a88c9a8c7</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <AssemblyName>containerlab-webapp-razor</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
