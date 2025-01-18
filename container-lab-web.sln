@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "container-lab-web", "container-lab-web.csproj", "{A6DE4884-4ECA-4CB8-B348-139EF62B8A4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "container-lab-webapp", "container-lab-webapp\container-lab-webapp.csproj", "{226B26CF-7A52-456C-8DAD-94FCF7036FAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A6DE4884-4ECA-4CB8-B348-139EF62B8A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6DE4884-4ECA-4CB8-B348-139EF62B8A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6DE4884-4ECA-4CB8-B348-139EF62B8A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6DE4884-4ECA-4CB8-B348-139EF62B8A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226B26CF-7A52-456C-8DAD-94FCF7036FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226B26CF-7A52-456C-8DAD-94FCF7036FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226B26CF-7A52-456C-8DAD-94FCF7036FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226B26CF-7A52-456C-8DAD-94FCF7036FAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
