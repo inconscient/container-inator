@@ -1,0 +1,29 @@
+﻿@page "/contextvariables"
+@using System
+@using System.Collections
+
+<PageTitle>Context Vars</PageTitle>
+
+<h1>Context's Environment Variables</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DictionaryEntry de in Environment.GetEnvironmentVariables())
+        {
+            <tr>
+                <td>@de.Key</td>
+                <td>@de.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+}

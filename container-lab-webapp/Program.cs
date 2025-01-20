@@ -2,6 +2,9 @@ using container_lab_webapp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add custom config
+builder.Configuration.AddJsonFile("CustomConfig.json", optional: true, reloadOnChange: true);
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();

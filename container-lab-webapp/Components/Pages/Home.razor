@@ -1,7 +1,94 @@
 ﻿@page "/"
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Hello, world! version: </h1>
 
-Welcome to your new app.
+<h2>AppSettings values</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>App Version</td>
+            <td>@appVersion</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (KeyValuePair<string,string> de in customVars)
+        {
+            <tr>
+                <td>@de.Key</td>
+                <td>@de.Value</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<h2>Custom settings saved in an independent file</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>RDB</td>
+            <td>@rdbSecret</td>
+        </tr>
+        <tr>
+            <td>TOP</td>
+            <td>@topSecret</td>
+        </tr>
+    </tbody>
+</table>
+
+
+@code{
+
+    //AppSettings 
+    private string? appVersion;
+    private List<string> customColors = new List<string>();
+    private Dictionary<string, string> customVars = new Dictionary<string, string>();
+
+    //Custom json settings
+    private string? rdbSecret;
+    private string? topSecret;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        appVersion = Configuration["AppVersion"];
+
+        IEnumerable<IConfigurationSection> section = Configuration.GetSection("CustomColors").GetChildren();
+
+        foreach (IConfigurationSection item in section)
+        {
+            customColors.Add($"Key: {item.Key}; Value:{item.Value}");
+            customVars.Add(item.Key, item.Value);
+        }
+
+        rdbSecret = Configuration["RDBsecret"];
+        topSecret = Configuration["TOPsecret"];
+
+    }
+
+}
