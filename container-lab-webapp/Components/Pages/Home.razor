@@ -38,7 +38,6 @@
             </tr>
         }
     </tbody>
-
 </table>
 
 <h2>Custom settings saved in an independent file</h2>
@@ -61,6 +60,25 @@
     </tbody>
 </table>
 
+<h2>settings defined in Env Vars</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ENVAR01</td>
+            <td>@Environment.GetEnvironmentVariable("ENVAR01")</td>
+        </tr>
+        <tr>
+            <td>ENVAR02</td>
+            <td>@Environment.GetEnvironmentVariable("ENVAR02")</td>
+        </tr>
+    </tbody>
+</table>
 
 @code{
 
