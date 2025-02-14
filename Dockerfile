@@ -27,4 +27,4 @@ RUN dotnet publish "./container-lab-webapp/container-lab-webapp.csproj" -c $BUIL
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "container-lab-web.dll"]
+ENTRYPOINT ["dotnet", "container-lab-webapp.dll"]
