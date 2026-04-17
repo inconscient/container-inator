@@ -1,5 +1,5 @@
 
-# container-inator 🐳
+# container-inator
 
 **container-inator** is a lightweight web application designed to run inside a container and provide a simple web interface for **evaluating, demonstrating, and validating container-based lab platforms**.
 
